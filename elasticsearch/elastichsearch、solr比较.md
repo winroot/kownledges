@@ -28,3 +28,7 @@
 **缺点**
 
 - 建立索引时，搜索效率下降，实时索引搜索效率不高。
+
+**Elasticsearch与Solr的比较**
+当单纯的对已有数据进行搜索时，Solr更快。
+![](https://i.imgur.com/hvU6yud.png)
