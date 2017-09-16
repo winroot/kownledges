@@ -29,6 +29,12 @@
 
 - 建立索引时，搜索效率下降，实时索引搜索效率不高。
 
-**Elasticsearch与Solr的比较**
+**Elasticsearch与Solr的比较**  
 当单纯的对已有数据进行搜索时，Solr更快。
 ![](https://i.imgur.com/hvU6yud.png)
+当实时建立索引时, Solr会产生io阻塞，查询性能较差, Elasticsearch具有明显的优势。
+![](https://i.imgur.com/PNOrg3e.png)
+随着数据量的增加，Solr的搜索效率会变得更低，而Elasticsearch却没有明显的变化。
+![](https://i.imgur.com/KEirAfw.png)
+
+参考：[http://www.cnblogs.com/chowmin/articles/4629220.html](http://www.cnblogs.com/chowmin/articles/4629220.html)
