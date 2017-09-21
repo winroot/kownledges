@@ -1,7 +1,7 @@
 # ElasticSearch的安装
 **操作系统环境：**  centos 6.7  
 **elasticsearch:** elasticsearch 2.1.1  
-**集群搭建方式：** （ip和hostname见安装步骤2）  
+**集群搭建方式：** 三个虚拟机节点（ip和hostname见安装步骤2）  
 **安装路径：** /opt  
 **必备环境：** java运行环境  
 # 安装步骤：
