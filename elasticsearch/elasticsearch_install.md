@@ -39,7 +39,7 @@ useradd elsearch -g elsearch -p elasticsearch
 
 9.切换到elsearch用户再启动  
 命令：
-su elsearch 
+su elsearch   
 cd elasticsearch/bin./elasticsearch  
 
 10.因为elasticsearch启动后会一直存在在界面上，所以可以让它在后台运行  
