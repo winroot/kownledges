@@ -1,6 +1,6 @@
-#**git 分支管理**
+# **git 分支管理**
 ---
-##git创建与合并分支
+## git创建与合并分支
 **首先，我们创建dev分支，然后切换到dev分支：**
 
     $ git checkout -b dev
@@ -33,7 +33,7 @@
     
     删除分支：git branch -d <name>
 
-##bug 分支 
+## bug 分支 
 软件开发中，bug就像家常便饭一样。有了bug就需要修复，在Git中，由于分支是如此的强大，所以，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。
 
 当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它，但是，等等，当前正在dev上进行的工作还没有提交：
@@ -124,7 +124,7 @@ $ git stash pop
 
     $ git stash apply stash@{0}
 
-##删除分支
+## 删除分支
     
     $ git branch -d feature-vulcan
     error: The branch 'feature-vulcan' is not fully merged.
@@ -148,7 +148,7 @@ $ git stash pop
     git merge upstream/master
     git push
 
-##git拉取远程分支并创建本地分支
+## git拉取远程分支并创建本地分支
 
 **查看远程分支**
 
