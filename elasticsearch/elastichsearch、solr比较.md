@@ -1,4 +1,4 @@
-#elasticsearch、solr对比
+# elasticsearch、solr对比
 
 **Elasticsearch的优缺点**:  
 **优点**  
