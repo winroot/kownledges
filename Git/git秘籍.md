@@ -1,6 +1,7 @@
 # **git 分支管理**
 ---
 ## git创建与合并分支
+
 **首先，我们创建dev分支，然后切换到dev分支：**
 
     $ git checkout -b dev
@@ -227,7 +228,18 @@ git代码库回滚: 指的是将代码库某分支退回到以前的某个commit
     
     7、git push origin :the_branch_backup //如果前面都成功了，删除这个备份分支
 
-# 谁动了我的代码？
+## 删除已经commit的文件
+    git checkout filename
+## 删除所有数据
+当我们需要删除暂存区或分支上的文件, 同时工作区也不需要这个文件了, 可以使用：
+  
+    git rm file_path
+
+##删除暂存区和分支文件，在本地保留
+
+    git rm --cached file_path
+
+## 谁动了我的代码？
 当事情出了乱子时立马责怪别人这是人类的天性。如果你的服务器程序不能正常工作了，要找出罪魁祸首是非常简单的--只需要执行git blame。这个命令告诉你文件里的每一行的作者是谁，最后改动那一行的提交，以及提交的时间戳。  
     `git blame [file_name]`
     
