@@ -137,7 +137,7 @@ $ git stash pop
     $ git branch -D feature-vulcan
     Deleted branch feature-vulcan (was 756d4af).
 
-##github 更新fork分支
+## github 更新fork分支
 在github上开发代码的时候我们习惯的是fork一个分支，然后修改再往主分支push request，这样就可以保证多人开发，
 
 但是随着时间的推移，自己fork的版本和主分支的版本差异越来越大; 这时我们就需要从远程分支更新代码并且更新到本地分支
@@ -180,7 +180,7 @@ $ git stash pop
 
 采用此种方法建立的本地分支不会和远程分支建立映射关系。
 
-##git 删除本地分支和远程分支、本地代码回滚和远程代码库回滚
+## git 删除本地分支和远程分支、本地代码回滚和远程代码库回滚
 
 【git 删除本地分支】
 
