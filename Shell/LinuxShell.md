@@ -1,25 +1,25 @@
 # Linux常用命令
-***
-1. 设置某个文件中某个参数的值
+
+1.设置某个文件中某个参数的值
 
 cat /etc/sysctl.conf | grep vm.max_map_countvm.max_map_count=262144
 
-2. 查看最新的日志文件 
+2.查看最新的日志文件 
 
 tailf xxx.log
 
-3. 杀掉进程
+3.杀掉进程
 
 kill -9 pid(进程号)
 
-4. 查看进程pid
+4.查看进程pid
 
 lsof -i:port
 
-5.查看进程所占内存三种方式：
-1） top -p 进程号
-2） ps -aux | grep 进程名
-3） cat /proc/进程号/status
+5.查看进程所占内存三种方式：  
+1） top -p 进程号  
+2） ps -aux | grep 进程名   
+3） cat /proc/进程号/status  
 VmSize(KB) 任务虚拟地址空间的大小 (total_vm-reserved_vm)，其中total_vm为进程的地址空间的大小，reserved_vm：进程在预留或特殊的内存间的物理页   
 VmLck(KB) 任务已经锁住的物理内存的大小。锁住的物理内存不能交换到硬盘 (locked_vm)   
 VmRSS(KB) 应用程序正在使用的物理内存的大小，就是用ps命令的参数rss的值 (rss)   
@@ -36,3 +36,7 @@ Threads 共享使用该信号描述符的任务的个数，在POSIX多线程序�
 4、静态库会编译为程序本身的一部分，不在VmLib的统计之内。   
 5、参考上面的说明   
 6、除非有非常明显的内存泄露，如内存一直大幅度增长并长时间不释放，否则单纯以来这些值是很判断真正的内在泄露。  
+
+6.查看某个进程是否存在  
+1)ps -ef | grep 进程号 | grep -v grep   
+2)ps aux | grep 进程号 | grep -v grep 
