@@ -38,6 +38,7 @@
 上一步只是在pom.xml 文件中指定了maven项目打包所使用到的工具，具体项目如何打包，文件类型、过滤等操作需要在assembly.xml文件中配置。  
 1） 首先在 pom.xml 配置项所指定的路径<descriptor>src/main/assembly/assembly.xml</descriptor>下创建assembly.xml文件。  
 2） 配置打包项：
+```
 <assembly>
     <id>all</id>
     <formats>
@@ -72,3 +73,4 @@
         </fileSet>
     </fileSets>
 </assembly>
+```
