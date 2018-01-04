@@ -4,7 +4,21 @@
 ---
 ## git创建与合并分支
 
-**首先，我们创建dev分支，然后切换到dev分支：**
+**Git鼓励大量使用分支：**
+
+    【查看分支】：git branch
+    
+    【创建分支】：git branch <name>
+    
+    【切换分支】：git checkout <name>
+    
+    【创建+切换分支】：git checkout -b <name>
+    
+    【合并某分支到当前分支】：git merge <name>
+    
+    【删除分支】：git branch -d <name>
+    
+**创建dev分支，然后切换到dev分支：**
 
     $ git checkout -b dev
     Switched to a new branch 'dev'
@@ -15,30 +29,17 @@
     $ git checkout dev
     Switched to branch 'dev'
 
-**合并dev分支，请注意--no-ff参数，表示禁用Fast forward：**
+**合并dev分支，请注意--no-ff参数，表示禁用Fast forward()：**
     
     $ git merge --no-ff -m "merge with no-ff" dev
     Merge made by the 'recursive' strategy.
      readme.txt |1 +
      1 file changed, 1 insertion(+)
 
-**Git鼓励大量使用分支：**
-
-    查看分支：git branch
-    
-    创建分支：git branch <name>
-    
-    切换分支：git checkout <name>
-    
-    创建+切换分支：git checkout -b <name>
-    
-    合并某分支到当前分支：git merge <name>
-    
-    删除分支：git branch -d <name>
 
 ## bug 分支 
-软件开发中，bug就像家常便饭一样。有了bug就需要修复，在Git中，由于分支是如此的强大，所以，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。
-
+每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。  
+**stash**
 当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它，但是，等等，当前正在dev上进行的工作还没有提交：
 
     $ git status
@@ -68,29 +69,35 @@
     $ git checkout master
     Switched to branch 'master'
     Your branch is ahead of 'origin/master' by 6 commits.
+    
     $ git checkout -b issue-101
     Switched to a new branch 'issue-101'
 现在修复bug，需要把“Git is free software ...”改为“Git is a free software ...”，然后提交：
     
     $ git add readme.txt 
+    
     $ git commit -m "fix bug 101"
     [issue-101 cc17032] fix bug 101
      1 file changed, 1 insertion(+), 1 deletion(-)
+     
 修复完成后，切换到master分支，并完成合并，最后删除issue-101分支：
 
     $ git checkout master
     Switched to branch 'master'
     Your branch is ahead of 'origin/master' by 2 commits.
+    
     $ git merge --no-ff -m "merged bug fix 101" issue-101
     Merge made by the 'recursive' strategy.
      readme.txt |2 +-
      1 file changed, 1 insertion(+), 1 deletion(-)
+     
     $ git branch -d issue-101
     Deleted branch issue-101 (was cc17032).
 太棒了，原计划两个小时的bug修复只花了5分钟！现在，是时候接着回到dev分支干活了！
     
     $ git checkout dev
     Switched to branch 'dev'
+    
     $ git status
     # On branch dev
     nothing to commit (working directory clean)
@@ -100,9 +107,9 @@
     stash@{0}: WIP on dev: 6224937 add merge
 工作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法：
 
-一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+(1)一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
 
-另一种方式是用git stash pop，恢复的同时把stash内容也删了：
+(2)另一种方式是用git stash pop，恢复的同时把stash内容也删了：
 
 $ git stash pop
 
@@ -232,6 +239,7 @@ git代码库回滚: 指的是将代码库某分支退回到以前的某个commit
 
 ## 删除已经commit的文件
     git checkout filename
+    
 ## 删除所有数据
 当我们需要删除暂存区或分支上的文件, 同时工作区也不需要这个文件了, 可以使用：
   
