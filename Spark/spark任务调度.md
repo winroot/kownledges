@@ -1,0 +1,8 @@
+![spark任务调度逻辑视图](https://i.imgur.com/z8L31GF.png)
+任务调度模块主要包含两大部分，即DAGSchedular和TaskScheduler,他们负责将用户提交的计算任务按照DAG划分为不同的阶段并且将不同阶段的计算任务提交到集群进行最终的计算。
+
+RDD Objects:这个可以理解为用户实际代码中创建的RDD，这些代码逻辑上组成了一个DAG，支持复杂拓扑。
+
+DAGScheduler:主要负责分析用户提交的应用，并根据计算任务的依赖关系建立DAG，然后将DAG划分为不同的Stage（阶段），其中每个Stage由可以并发执行的一组Task构成，这些Task的执行逻辑完全相同，只是作用于不同的数据。
+
+TaskScheduler:DAGScheduler 将这组Task划分完后，会将这组Task提交到TaskScheduler。TaskScheduler通过Cluster Manager在集群中的某个Worker的Excutor上启动任务。
