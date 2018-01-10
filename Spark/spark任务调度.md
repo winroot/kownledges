@@ -1,4 +1,5 @@
 ![spark任务调度逻辑视图](https://i.imgur.com/z8L31GF.png)
+
 任务调度模块主要包含两大部分，即DAGSchedular和TaskScheduler,他们负责将用户提交的计算任务按照DAG划分为不同的阶段并且将不同阶段的计算任务提交到集群进行最终的计算。
 
 RDD Objects:这个可以理解为用户实际代码中创建的RDD，这些代码逻辑上组成了一个DAG，支持复杂拓扑。
