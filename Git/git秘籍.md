@@ -189,6 +189,9 @@ $ git stash pop
 
 采用此种方法建立的本地分支不会和远程分支建立映射关系。
 
+## git直接将本地分支push到远程（自动在github上创建分支）
+    git push --set-upstream origin branch
+
 ## git 删除本地分支和远程分支、本地代码回滚和远程代码库回滚
 
 【git 删除本地分支】
