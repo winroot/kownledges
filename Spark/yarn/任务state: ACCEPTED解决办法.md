@@ -17,4 +17,8 @@
 
 > yarn application -list
 
+kill application:
+
+> yarn application -kill application_id
+
 
