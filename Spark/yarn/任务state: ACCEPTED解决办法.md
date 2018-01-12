@@ -8,3 +8,13 @@
 > yarn.scheduler.capacity.maximum-am-resource-percent从0.1调到更大（如0.5）就可以了。
 
 顾名思义，这个选项是增加yarn可调度资源量。
+
+查看spark进程：
+
+> ps aux |grep spark
+
+查看spark上正在运行的任务：
+
+> yarn application -list
+
+
