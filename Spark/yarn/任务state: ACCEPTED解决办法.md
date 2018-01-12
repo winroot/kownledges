@@ -9,6 +9,8 @@
 
 顾名思义，这个选项是增加yarn可调度资源量。
 
+ ---
+
 查看spark进程：
 
 > ps aux |grep spark
