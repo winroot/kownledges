@@ -9,7 +9,7 @@
     
     【查看分支】：git branch -r(v)
     
-    【查看所有远程和本地分支】：git branch -a(v)
+    【查看所有远程和本地分支】：git branch -a(v)  
     
     【创建分支】：git branch <name>
     
