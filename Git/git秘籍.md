@@ -19,7 +19,7 @@
     
     【合并某分支到当前分支】：git merge <name>
     
-    【删除分支】：git branch -d <name> 或者 git branch -D <name>
+    【删除分支】：git branch -d <name> 或者 git branch -D <name>  
     
     【删除远程分支】git branch -r -d <name> 或者 git push origin :<name>(origin后面有空格)
     
