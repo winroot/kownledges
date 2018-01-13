@@ -53,12 +53,12 @@
 
 强行删除：
     
-        $ git branch -D feature-vulcan
-        Deleted branch feature-vulcan (was 756d4af).
+    $ git branch -D feature-vulcan
+    Deleted branch feature-vulcan (was 756d4af).
        
 【删除本地分支】
 
-       git branch -d(D) br
+    git branch -d(D) br
 
 【删除远程分支】
 
