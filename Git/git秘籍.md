@@ -43,8 +43,8 @@
      readme.txt |1 +
      1 file changed, 1 insertion(+)
 
- **删除分支**
-    
+ **删除分支**  
+    
     $ git branch -d feature-vulcan
     error: The branch 'feature-vulcan' is not fully merged.
     If you are sure you want to delete it, run 'git branch -D feature-vulcan'.
@@ -56,14 +56,13 @@
         $ git branch -D feature-vulcan
         Deleted branch feature-vulcan (was 756d4af).
        
-【git 删除本地分支】
+【删除本地分支】
 
        git branch -d(D) br
 
-【git 删除远程分支】
+【删除远程分支】
 
     git push origin :br  (origin 后面有空格)
-    或者：  
     git branch -r -d origin/branch-name  
 
 ## github 更新fork分支
