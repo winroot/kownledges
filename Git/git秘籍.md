@@ -5,23 +5,23 @@
 
 **git 常用命令：**
 
-    【查看分支】：git branch (-v包含注释)
+    【查看分支】：git branch (-v包含注释)   
     
-    【查看分支】：git branch -r(v)
+    【查看分支】：git branch -r(v)   
     
-    【查看所有远程和本地分支】：git branch -a(v)  
+    【查看所有远程和本地分支】：git branch -a(v)     
     
-    【创建分支】：git branch <name>
+    【创建分支】：git branch <name>   
     
-    【切换分支】：git checkout <name>
+    【切换分支】：git checkout <name>   
     
-    【创建+切换分支】：git checkout -b <name>
+    【创建+切换分支】：git checkout -b <name>   
     
-    【合并某分支到当前分支】：git merge <name>
+    【合并某分支到当前分支】：git merge <name>   
     
-    【删除分支】：git branch -d <name> 或者 git branch -D <name>  
+    【删除分支】：git branch -d <name> 或者 git branch -D <name>     
     
-    【删除远程分支】git branch -r -d <name> 或者 git push origin :<name>(origin后面有空格)
+    【删除远程分支】git branch -r -d <name> 或者 git push origin :<name>(origin后面有空格)  
     
 **创建dev分支，然后切换到dev分支：**
 
