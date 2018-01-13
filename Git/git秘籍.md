@@ -3,7 +3,7 @@
 # **git 操作命令大全**
 
 
-**git 常用命令：**
+## git 常用命令：
 
     【查看分支】：git branch (-v包含注释)   
     
@@ -23,6 +23,8 @@
     
     【删除远程分支】git branch -r -d <name> 或者 git push origin :<name>(origin后面有空格)  
     
+
+## 分支创建与管理     
 **创建dev分支，然后切换到dev分支：**
 
     $ git checkout -b dev
