@@ -62,8 +62,8 @@
 
 【删除远程分支】
 
-    git push origin :br  (origin 后面有空格)
-    git branch -r -d origin/branch-name  
+    git push origin :br  (origin 后面有空格)
+    git branch -r -d origin/br  
 
 ## github 更新fork分支
 在github上开发代码的时候我们习惯的是fork一个分支，然后修改再往主分支push request，这样就可以保证多人开发，
