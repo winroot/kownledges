@@ -1,4 +1,4 @@
-#Spark的stage & job & task 到底是什么 ,以及划分原理
+# Spark的stage & job & task 到底是什么 ,以及划分原理
 
 Stage 是spark 中一个非常重要的概念 ，
 在一个job 中划分stage 的一个重要依据是否有shuflle 发生(更严格的说是宽依赖) ，也就是是否会发生数据的重组 （重新组织数据）。
