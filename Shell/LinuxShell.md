@@ -51,16 +51,16 @@ rpm -qa XXX*
 永久关闭/启动防火墙：chkconfig iptables off/on
 查看防火墙状态：service iptables stop
 
-9.查看IO情况
+9.查看IO情况  
 diskio
 
-10.查看CPU信息
+10.查看CPU信息  
 cat /proc/cpuinfo
 
-11.查看内存使用率
+11.查看内存使用率  
 free -m/g
 
-12.查看包含特殊字段的日志信息
+12.查看包含特殊字段的日志信息  
 tailf xxx.log | grep 关键字
 
 
