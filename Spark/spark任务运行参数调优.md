@@ -55,3 +55,5 @@
   --conf spark.default.parallelism=1000 \  
   --conf spark.storage.memoryFraction=0.5 \  
   --conf spark.shuffle.memoryFraction=0.3 \
+  
+  详细参考：https://tech.meituan.com/spark-tuning-basic.html
