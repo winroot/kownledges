@@ -273,7 +273,7 @@ git remote set-url origin <url>
  
 方法2.先删后加
 
-git remote rm origin
+git remote rm origin  
 git remote add origin [url]
 
 方法3.直接打开.git 文件中config修改
