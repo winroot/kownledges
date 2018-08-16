@@ -287,3 +287,32 @@ git add . ：他会监控工作区的状态树，使用它会把工作时的所�
 git add -u ：他仅监控已经被add的文件（即tracked file），他会将被修改的文件提交到暂存区。add -u 不会提交新文件（untracked file）。（git add --update的缩写）
 
 git add -A ：是上面两个功能的合集（git add --all的缩写）
+
+## git reflog
+运行 git reflog 将在本地工作副本中显示当前分支的所有活动的列表，并为你提供每个提交的 SHA1 值。一旦发现你变基时放弃的那个提交，你可以运行 git checkout <SHA1> 跳转到该提交，复制任何你需要的信息，然后再运行 git checkout HEAD 返回到分支最近的提交去。
+
+## 显示已经全部合并到当前分支的分支
+$ git branch --merged
+## 显示没有合并到当前分支的分支
+$ git branch --no-merged
+
+## 查看各种设置
+git config --list
+
+## Change message of last commit
+git commit --amend -m "New commit message"
+
+
+## See differences between two commits
+git diff COMMIT1_ID COMMIT2_ID
+## See the files changed between two commits
+git diff --name-only COMMIT1_ID COMMIT2_ID
+## See the files changed in a specific commit
+git diff-tree --no-commit-id --name-only -r COMMIT_ID
+
+## See commit history for the last two commits
+git log -2
+## See commit history for the last two commits, with diff
+git log -p -2
+## See commit history printed in single lines
+git log --pretty=oneline
